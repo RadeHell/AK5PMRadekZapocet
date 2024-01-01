@@ -1,0 +1,7 @@
+{
+  "name": "AK5PMRadekZapocet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
