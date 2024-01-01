@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherAPIService } from '../api/weather-api.service';
 
 @Component({
   selector: 'app-weather',
@@ -6,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather.page.scss'],
 })
 export class WeatherPage implements OnInit {
-
-  constructor() { }
-
   userInput: String = ''
+
+  constructor(private apiService: WeatherAPIService) { }
 
   ngOnInit() {
   }
 
   weatherClicked(){
+    console.log(this.userInput)
+    this.apiService.getWeather(this.userInput)
 
   }
 
