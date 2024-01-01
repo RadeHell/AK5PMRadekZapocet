@@ -8,15 +8,15 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'weather',
         loadChildren: () => import('../weather/weather.module').then(m => m.WeatherPageModule)
       },
       {
-        path: 'tab2',
+        path: 'search-history',
         loadChildren: () => import('../search-history/search-history.module').then(m => m.SearchHistoryPageModule)
       },
       {
-        path: 'tab3',
+        path: 'about-app',
         loadChildren: () => import('../about-app/about-app.module').then(m => m.AboutAppPageModule)
       },
       {
