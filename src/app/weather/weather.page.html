@@ -10,4 +10,24 @@
       <ion-title size="large">Weather</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+  <ion-card>
+    <ion-card-content>
+     <ion-input
+         type="text"
+         fill="solid"
+         label="Weather location search"
+         labelPlacement="floating"
+         helperText="Input you location for weather discovery."
+         errorText="Invalid location"
+         [(ngModel)] ="userInput"
+         ></ion-input>
+    </ion-card-content>
+   </ion-card>
+
+   <ion-button (click)="weatherClicked()"
+   expand="block">Find your local weather</ion-button>
+ 
+
 </ion-content>

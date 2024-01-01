@@ -9,7 +9,13 @@ export class WeatherPage implements OnInit {
 
   constructor() { }
 
+  userInput: String = ''
+
   ngOnInit() {
+  }
+
+  weatherClicked(){
+
   }
 
 }
