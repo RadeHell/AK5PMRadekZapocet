@@ -5,6 +5,26 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'weather',
+    loadChildren: () => import('./app/weather/weather.module').then( m => m.WeatherPageModule)
+  },
+  {
+    path: 'weather',
+    loadChildren: () => import('./weather/weather.module').then( m => m.WeatherPageModule)
+  },
+  {
+    path: 'search-history',
+    loadChildren: () => import('./search-history/search-history.module').then( m => m.SearchHistoryPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'about-app',
+    loadChildren: () => import('./about-app/about-app.module').then( m => m.AboutAppPageModule)
   }
 ];
 @NgModule({
