@@ -8,19 +8,11 @@ const routes: Routes = [
   },
   {
     path: 'weather',
-    loadChildren: () => import('./app/weather/weather.module').then( m => m.WeatherPageModule)
-  },
-  {
-    path: 'weather',
     loadChildren: () => import('./weather/weather.module').then( m => m.WeatherPageModule)
   },
   {
     path: 'search-history',
     loadChildren: () => import('./search-history/search-history.module').then( m => m.SearchHistoryPageModule)
-  },
-  {
-    path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   },
   {
     path: 'about-app',
