@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http'
 
 @Injectable({
@@ -11,17 +11,16 @@ export class WeatherAPIService {
 
   getWeather(userInput: String): Observable<any> {
     if(userInput) {
-      let geo = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&limit=5&appid=ac802b896ba6c4fa64f4d24c4087a264`
-      let url = `https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={b4575e38e0ba4219f7b23ff2d44931c1}`
-      return this.http.get(url)
-    }
+       //let userInput = "London"
+      //let url = `https://api.openweathermap.org/data/2.5/weather?lat=${userInput}&lon=10.99&appid=b4575e38e0ba4219f7b23ff2d44931c1`
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&appid=b4575e38e0ba4219f7b23ff2d44931c1`
 
+     //let url = `https://api.mymemory.translated.net/get?q=${userInput}&langpair=cs|en`
+     
+     return this.http.get(url)
+    }
     return of(null)
 
   }
-
-
-
-    
-  
+ 
 }

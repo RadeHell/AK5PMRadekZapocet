@@ -29,5 +29,11 @@
    <ion-button (click)="weatherClicked()"
    expand="block">Find your searched location weather</ion-button>
  
+   <ion-card *ngIf="weatherOutput$ | async; let output">
+    <ion-card-content>
+     Temperature in  {{ output.name}} was today around {{ output.main.temp}}° Celsius
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>
