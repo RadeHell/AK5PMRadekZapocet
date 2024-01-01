@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage-angular';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HistoryServiceService {
+export class HistorySearchService {
 
   private _storage: Storage | null = null;
 
@@ -32,5 +31,4 @@ export class HistoryServiceService {
   async get(key: string){
     return this._storage?.get(key)
   }
-
 }
