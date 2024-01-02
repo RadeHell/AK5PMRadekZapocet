@@ -10,4 +10,12 @@
       <ion-title size="large">search-history</ion-title>
     </ion-toolbar>
   </ion-header>
+
+<ul>
+
+  <!-- pole polozek--> 
+  <li *ngFor="let history of storedData">
+    {{ history }} </li>
+</ul>
+
 </ion-content>

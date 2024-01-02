@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Storage } from '@ionic/storage-angular';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +25,7 @@ export class HistorySearchService {
   //metody set a get
 
 
-  set(key: string, value: any) {
+  async set(key: string, value: any) {
     console.log('set mehtod was called')
     this._storage?.set(key, value)
   }
