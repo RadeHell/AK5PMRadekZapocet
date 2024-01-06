@@ -1,21 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>search-history</ion-title>
+    <ion-title>Weather records</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">search-history</ion-title>
+      <ion-title size="large">Weather records</ion-title>
     </ion-toolbar>
   </ion-header>
 
-<ul>
-
   <!-- pole polozek--> 
-  <li *ngFor="let history of storedData">
-    {{ history }} </li>
-</ul>
+  <ion-list>
+    <ion-item  *ngFor="let history of storedData">
+      <ion-label>
+        {{ history }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
