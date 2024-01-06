@@ -20,7 +20,8 @@ export class WeatherPage  {
  
   constructor(
     private storage: HistorySearchService,
-    private apiService: WeatherAPIService) { }
+    private apiService: WeatherAPIService
+    ) { }
 
     async ionViewDidEnter () {
       const storedData = await this.storage.get('history');
@@ -35,8 +36,11 @@ export class WeatherPage  {
     this.weatherOutput$ = this.apiService.getWeather(this.userInput)
     
     
+    
     this.weatherOutput$.subscribe(data => {
-    let historyItem = `${this.userInput} ->   ${data.weatherOutput$.name}`
+    let date: Date = new Date();
+    let historyItem = `Record of city ${this.userInput} was ${data.main.temp}`
+    //let historyItem = `${this.userInput} -> ${data.responseData.translatedText}`
     this.historyArray.unshift(historyItem)
     this.storage.set('history',JSON.stringify(this.historyArray))
     

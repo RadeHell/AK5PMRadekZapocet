@@ -31,7 +31,9 @@
  
    <ion-card *ngIf="weatherOutput$ | async; let output">
     <ion-card-content>
-     Temperature in city {{ output.name}} was today around {{ output.main.temp}}° Celsius
+     <!--  {{ output.responseData.translatedText }} -->
+     Temperature in city {{ output.name}} was today around {{ output.main.temp}}° Celsius 
+
     </ion-card-content>
   </ion-card>
 

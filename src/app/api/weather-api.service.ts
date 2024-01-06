@@ -12,10 +12,14 @@ export class WeatherAPIService {
   getWeather(userInput: String): Observable<any> {
     if(userInput) {
        //let userInput = "London"
-      //let url = `https://api.openweathermap.org/data/2.5/weather?lat=${userInput}&lon=10.99&appid=b4575e38e0ba4219f7b23ff2d44931c1`
+      
+      
+     
       let url = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&appid=c11c923969e873f8d2ea553e2f42f911`
-
-     //let url = `https://api.mymemory.translated.net/get?q=${userInput}&langpair=cs|en`
+       
+      //Testing part
+      //let url = `https://api.openweathermap.org/data/2.5/weather?lat=${userInput}&lon=10.99&appid=b4575e38e0ba4219f7b23ff2d44931c1`
+      //let url = `https://api.mymemory.translated.net/get?q=${userInput}&langpair=cs|en`
      
      return this.http.get(url)
     }
