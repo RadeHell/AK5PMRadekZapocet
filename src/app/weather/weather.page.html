@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center">
     <ion-title>WeatherWise</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,9 +12,9 @@
   </ion-header>
 
 
-  <ion-card>
-    <ion-card-content>
-     <ion-input
+  <ion-card >
+    <ion-card-content >
+     <ion-input  
          type="text"
          fill="solid"
          label="Weather location search"
@@ -26,11 +26,11 @@
     </ion-card-content>
    </ion-card>
 
-   <ion-button (click)="weatherClicked()"
+   <ion-button  class="ion-text-center" (click)="weatherClicked()"
    expand="block">Find your searched location weather</ion-button>
  
-   <ion-card *ngIf="weatherOutput$ | async; let output">
-    <ion-card-content>
+   <ion-card  *ngIf="weatherOutput$ | async; let output">
+    <ion-card-content >
      <!--  {{ output.responseData.translatedText }} -->
      Average temperature in location {{ output.name}} ({{output.sys.country}}) was today around {{ output.main.temp}}° Celsius 
     </ion-card-content>
