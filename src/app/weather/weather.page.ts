@@ -39,7 +39,7 @@ export class WeatherPage  {
     
     this.weatherOutput$.subscribe(data => {
     let date: Date = new Date();
-    let historyItem = `Record of location ${data.name} (${data.sys.country}) was ${data.main.temp} ° Celsius `
+    let historyItem = `Record of searched location ${data.name} (${data.sys.country}) was ${data.main.temp} ° Celsius `
     //let historyItem = `${this.userInput} -> ${data.responseData.translatedText}`
     this.historyArray.unshift(historyItem)
     this.storage.set('history',JSON.stringify(this.historyArray))
